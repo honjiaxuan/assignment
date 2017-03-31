@@ -7,8 +7,9 @@ output: html_document
 
 \`\`\`{r,echo=FALSE}
 library(leaflet)
-my_map <- leaflet() %>% 
-  addTiles()  %>%
-addMarkers(lat=-26.158632, lng= 27.903283, popup="My Laboratory")
-my_map
+
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+m  # Print the map
 \`\`\`
